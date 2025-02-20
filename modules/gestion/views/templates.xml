@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+        <record id="franquicia_form_view" model="ir.ui.view">
+            <field name="name">franquicia.form.view</field>
+            <field name="model">gestion.franquicia</field>
+            <field name="arch" type="xml">
+                <form string="Franquicia">
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="ciudad" required="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="franquicia_list_view" model="ir.ui.view">
+            <field name="name">franquicia.list.view</field>
+            <field name="model">gestion.franquicia</field>
+            <field name="arch" type="xml">
+                <list string="Franquicia">
+                    <field name="name"/>
+                    <field name="ciudad"/>  
+                </list>
+            </field>
+        </record>
+
+        <record id="franquicia_action" model="ir.actions.act_window">
+            <field name="name">Franquicias</field>
+            <field name="res_model">gestion.franquicia</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_root" name="Gestion" sequence="10"/>
+        <menuitem id="menu_franquicias" name="Franquicias" parent="menu_root"/>
+        <menuitem id="menu_franquicias_lista" name="Lista Franquicias" 
+        parent="menu_franquicias" action="franquicia_action"/>
+    </data>
+</odoo>

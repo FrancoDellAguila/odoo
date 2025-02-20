@@ -3,8 +3,16 @@
 [![Help](https://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/forum/help-1)
 [![Nightly Builds](https://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://nightly.odoo.com/)
 
+comandos útiles
+
+python odoo-bin -r supa -w admin --addons-path=addons -d odoo -i base //-i base reinicia base de datos
+
+ejecutar proyecto:
+python odoo-bin -r supa -w admin --addons-path=addons,modules -d odoo 
+
 Odoo
 ----
+
 
 Odoo is a suite of web based open source business apps.
 
